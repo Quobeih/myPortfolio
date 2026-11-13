@@ -1,204 +1,1259 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Prof. Nestor Jr. T. Suerte — IT educator, developer and DIT candidate in the Philippines.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap">
-<style>
-body{margin:0;background:#0E1525}
-a{color:#F5B83D}a:hover{color:#FFD27A}
-</style>
-<style>html{scroll-behavior:smooth}</style>
-<title>Prof. Nestor Jr. T. Suerte — IT Educator &amp; Developer</title>
-</head>
-<body>
-<div style="background: #0E1525; color: #E6E9F0; font-family: Inter, system-ui, sans-serif; font-size: 17px; line-height: 1.6; min-height: 100vh">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<header style="max-width: 1120px; margin: 0 auto; padding: 24px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px">
-<a href="#top" style="font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: 22px; color: #FFFFFF; text-decoration: none">N. Suerte<span style="color: #F5B83D">.</span></a>
-<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 4px">
-<a href="#about" style="color: #C9CFDB; text-decoration: none; padding: 10px 12px; font-size: 15px">About</a>
-<a href="#teaching" style="color: #C9CFDB; text-decoration: none; padding: 10px 12px; font-size: 15px">Teaching</a>
-<a href="#projects" style="color: #C9CFDB; text-decoration: none; padding: 10px 12px; font-size: 15px">Projects</a>
-<a href="#research" style="color: #C9CFDB; text-decoration: none; padding: 10px 12px; font-size: 15px">Research</a>
-<a href="#contact" style="color: #0E1525; background: #F5B83D; text-decoration: none; padding: 10px 18px; border-radius: 8px; font-weight: 600; font-size: 15px">Contact</a>
-</nav>
+  <title>Nestor Jr. Suerte | Full-Stack Developer & AI Developer</title>
+
+  <meta name="description" content="Nestor Jr. Suerte is a full-stack software developer specializing in web applications, Android development, AI integration, and business systems.">
+
+  <meta name="author" content="Nestor Jr. T. Suerte">
+  <meta name="theme-color" content="#0E1525">
+
+  <meta property="og:title" content="Nestor Jr. Suerte | Software Developer">
+  <meta property="og:description" content="Building practical web, mobile, and AI-powered software solutions.">
+  <meta property="og:type" content="website">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #0E1525;
+      --surface: #131C30;
+      --card: #18233A;
+      --border: #293650;
+      --gold: #F5B83D;
+      --gold-light: #FFD27A;
+      --white: #FFFFFF;
+      --text: #E6E9F0;
+      --muted: #A9B1C2;
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: Inter, sans-serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold-light);
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    h1, h2, h3 {
+      font-family: "Space Grotesk", sans-serif;
+      color: var(--white);
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 2.7rem);
+    }
+
+    p {
+      color: var(--muted);
+    }
+
+    .container {
+      width: min(1120px, calc(100% - 48px));
+      margin: auto;
+    }
+
+    .section {
+      padding: 90px 0;
+    }
+
+    .section-alt {
+      background: var(--surface);
+    }
+
+    .section-heading {
+      margin-bottom: 40px;
+    }
+
+    .section-heading p {
+      max-width: 650px;
+      margin-top: 12px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 13px 23px;
+      border-radius: 9px;
+      font-weight: 600;
+      transition: .2s ease;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: var(--bg);
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      color: var(--bg);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--border);
+      color: var(--white);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+
+    /* NAVIGATION */
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(14, 21, 37, .95);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .navbar {
+      min-height: 76px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .logo {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: 23px;
+      font-weight: 700;
+      color: var(--white);
+    }
+
+    .logo span {
+      color: var(--gold);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      color: var(--text);
+      font-size: 14px;
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    .nav-links .nav-contact {
+      background: var(--gold);
+      color: var(--bg);
+      padding: 9px 17px;
+      border-radius: 8px;
+    }
+
+    /* HERO */
+
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      padding: 75px 0 90px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.5fr .8fr;
+      gap: 65px;
+      align-items: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      margin: 17px 0;
+      letter-spacing: -2px;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+    }
+
+    .hero-subtitle {
+      font-family: "Space Grotesk", sans-serif;
+      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
+      color: var(--text);
+      margin-bottom: 20px;
+    }
+
+    .hero-description {
+      max-width: 650px;
+      margin-bottom: 28px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .profile-wrapper {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-image {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      object-fit: cover;
+      object-position: center 20%;
+      border: 5px solid var(--gold);
+      box-shadow: 0 0 50px rgba(245, 184, 61, .12);
+    }
+
+    /* TRUST STRIP */
+
+    .trust-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px 45px;
+      padding: 25px;
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      color: var(--muted);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .trust-strip span {
+      color: var(--gold);
+    }
+
+    /* ABOUT */
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 50px;
+    }
+
+    .about-text p {
+      margin-top: 17px;
+    }
+
+    .about-details {
+      display: grid;
+      gap: 14px;
+    }
+
+    .detail-card {
+      padding: 21px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+
+    .detail-card h3 {
+      font-size: 16px;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+
+    .detail-card p {
+      font-size: 14px;
+    }
+
+    /* SERVICES */
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .service-card {
+      padding: 28px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: .2s;
+    }
+
+    .service-card:hover {
+      border-color: var(--gold);
+      transform: translateY(-4px);
+    }
+
+    .service-icon {
+      font-size: 30px;
+      margin-bottom: 15px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      font-size: 14px;
+      margin-bottom: 14px;
+    }
+
+    .service-card ul {
+      padding-left: 18px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .service-card li {
+      margin: 5px 0;
+    }
+
+    /* TECHNOLOGIES */
+
+    .tech-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .tech-tag {
+      border: 1px solid var(--border);
+      background: var(--card);
+      padding: 9px 16px;
+      border-radius: 8px;
+      font-size: 14px;
+      color: var(--text);
+    }
+
+    /* PROJECTS */
+
+    .project-list {
+      display: grid;
+      gap: 28px;
+    }
+
+    .project-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+
+    .project-content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .project-info {
+      padding: 34px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .project-label {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .project-info h3 {
+      font-size: 29px;
+      margin-bottom: 13px;
+    }
+
+    .project-info p {
+      margin-bottom: 15px;
+      font-size: 14px;
+    }
+
+    .project-info ul {
+      padding-left: 19px;
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .project-info li {
+      margin-bottom: 6px;
+    }
+
+    .project-tech {
+      margin-top: auto;
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 600;
+      padding-top: 12px;
+    }
+
+    .project-gallery {
+      background: #1B2540;
+      padding: 22px;
+      display: flex;
+      gap: 14px;
+      overflow-x: auto;
+      align-items: center;
+    }
+
+    .project-gallery img {
+      height: 350px;
+      width: auto;
+      max-width: none;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+    }
+
+    .project-banner {
+      width: 100%;
+      display: block;
+    }
+
+    .project-full-info {
+      padding: 30px 34px 35px;
+    }
+
+    .project-full-info h3 {
+      font-size: 27px;
+      margin: 10px 0;
+    }
+
+    .project-full-info p {
+      font-size: 14px;
+      max-width: 850px;
+    }
+
+    .project-full-info ul {
+      padding-left: 20px;
+      color: var(--muted);
+      font-size: 14px;
+      margin: 14px 0;
+    }
+
+    .project-full-info li {
+      margin: 5px 0;
+    }
+
+    .project-placeholder {
+      min-height: 230px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      padding: 30px;
+      background: linear-gradient(135deg, #1B2540, #10192B);
+    }
+
+    .project-placeholder .symbol {
+      font-size: 55px;
+      margin-bottom: 15px;
+    }
+
+    .project-placeholder p {
+      max-width: 300px;
+      font-size: 13px;
+    }
+
+    /* PROCESS */
+
+    .process-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .process-card {
+      padding: 23px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+    }
+
+    .process-card .number {
+      color: var(--gold);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .process-card h3 {
+      font-size: 17px;
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      font-size: 13px;
+    }
+
+    /* CONTACT */
+
+    .contact-box {
+      max-width: 760px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 18px;
+    }
+
+    .contact-box p {
+      margin-bottom: 25px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    .email-text {
+      margin-top: 25px;
+      font-size: 14px;
+    }
+
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 25px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 800px) {
+      .hero-grid,
+      .about-grid,
+      .project-content {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding: 55px 0;
+      }
+
+      .profile-wrapper {
+        grid-row: 1;
+      }
+
+      .profile-image {
+        width: 220px;
+        height: 220px;
+      }
+
+      .project-gallery img {
+        height: 290px;
+      }
+
+      .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        width: calc(100% - 32px);
+      }
+
+      .navbar {
+        padding: 14px 0;
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        width: 100%;
+        overflow-x: auto;
+        padding-bottom: 5px;
+        gap: 17px;
+      }
+
+      .nav-links a {
+        white-space: nowrap;
+        font-size: 13px;
+      }
+
+      .section {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 2.8rem;
+      }
+
+      .services-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .project-info,
+      .project-full-info {
+        padding: 24px;
+      }
+
+      .project-gallery img {
+        height: 250px;
+      }
+
+      .trust-strip {
+        gap: 12px 22px;
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<header>
+  <div class="container navbar">
+    <a href="#home" class="logo">N. Suerte<span>.</span></a>
+
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact" class="nav-contact">Hire Me</a>
+    </nav>
+  </div>
 </header>
 
-<section id="top" style="max-width: 1120px; margin: 0 auto; padding: 48px 24px 88px; display: flex; flex-wrap: wrap-reverse; gap: 48px; align-items: center">
-<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
-<p style="margin: 0; color: #F5B83D; font-weight: 600; font-size: 14px; letter-spacing: 0.08em; text-transform: uppercase">IT Educator · Developer · Researcher · Philippines</p>
-<h1 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-weight: 700; font-size: clamp(2.4rem, 5.5vw, 4.25rem); line-height: 1.05; color: #FFFFFF">Prof. Nestor Jr. T. Suerte</h1>
-<p style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(1.25rem, 2.4vw, 1.6rem); line-height: 1.35; color: #E6E9F0; max-width: 700px">I teach technology by building it, and I build software people can actually use.</p>
-<p style="margin: 0; max-width: 640px; color: #C9CFDB">I'm a BSIT educator and working developer who builds web, mobile and IoT systems, from community apps like PaddleTa! to small-business and trading tools. I'm currently pursuing my Doctor in Information Technology.</p>
-<div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 6px">
-<a href="#projects" style="background: #F5B83D; color: #0E1525; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 600">View projects</a>
-<a href="#contact" style="border: 1px solid #3A4560; color: #FFFFFF; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 600">Work with me</a>
-</div>
-</div>
-<div style="flex: 1 1 260px; display: flex; justify-content: center">
-<img src="assets/profile.jpg" alt="Prof. Nestor Jr. T. Suerte" style="width: 280px; height: 280px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 4px solid #F5B83D; display: block">
-</div>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div>
+      <p class="eyebrow">Full-Stack Developer · AI & Mobile Developer</p>
+
+      <h1>
+        Hi, I'm Nestor Jr. <span>Suerte.</span>
+      </h1>
+
+      <p class="hero-subtitle">
+        I build practical software solutions that solve real-world problems.
+      </p>
+
+      <p class="hero-description">
+        I'm a software developer and IT educator specializing in web applications,
+        Android development, business management systems, and AI-powered solutions.
+        I help businesses, startups, and organizations turn ideas into functional,
+        user-friendly software.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#projects" class="btn btn-primary">Explore My Work</a>
+        <a href="#contact" class="btn btn-outline">Let's Work Together</a>
+      </div>
+    </div>
+
+    <div class="profile-wrapper">
+      <img
+        src="assets/profile.jpg"
+        alt="Nestor Jr. Suerte"
+        class="profile-image">
+    </div>
+
+  </div>
 </section>
 
-<section id="about" style="background: #131C30; padding: 88px 24px">
-<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px">
-<div style="flex: 1 1 380px; display: flex; flex-direction: column; gap: 16px">
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); color: #FFFFFF">About me</h2>
-<p style="margin: 0; color: #C9CFDB">I stand where the classroom meets real development work. I teach programming, web, mobile, IoT and AI, and I build and ship my own systems, so the lessons I give come from projects that have actually run.</p>
-<p style="margin: 0; color: #C9CFDB">My approach is practical first. I'd rather show a working app than a slide full of theory, and I design lessons that are simple, realistic and ready for beginners.</p>
-<p style="margin: 0; color: #C9CFDB">I also use AI-assisted development and automation in my own workflow, working with coding agents to plan, build and improve systems faster.</p>
+
+<!-- EXPERTISE STRIP -->
+
+<div class="trust-strip">
+  <div><span>✓</span> Web Development</div>
+  <div><span>✓</span> Android Development</div>
+  <div><span>✓</span> AI Integration</div>
+  <div><span>✓</span> Business Systems</div>
+  <div><span>✓</span> IoT Solutions</div>
 </div>
-<div style="flex: 1 1 320px; display: flex; flex-direction: column; gap: 14px">
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 20px 22px; background: #0E1525">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Now</p>
-<p style="margin: 4px 0 0; color: #E6E9F0">Pursuing a Doctor in Information Technology</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 20px 22px; background: #0E1525">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Teaching</p>
-<p style="margin: 4px 0 0; color: #E6E9F0">BSIT courses in programming, web, mobile, IoT and AI</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 20px 22px; background: #0E1525">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Building</p>
-<p style="margin: 4px 0 0; color: #E6E9F0">Community apps, small-business tools, trading tools</p>
-</div>
-</div>
-</div>
+
+
+<!-- ABOUT -->
+
+<section class="section section-alt" id="about">
+  <div class="container about-grid">
+
+    <div class="about-text">
+      <p class="eyebrow">Get to know me</p>
+      <h2>About Me</h2>
+
+      <p>
+        I am an IT professional who combines academic experience with
+        hands-on software development. As an Assistant Professor in
+        Information Technology, I teach programming, web development,
+        mobile application development, IoT, and emerging technologies.
+      </p>
+
+      <p>
+        Beyond teaching, I design and develop practical software products
+        for small businesses, communities, and organizations. My work
+        focuses on building applications that address actual problems
+        through thoughtful design and reliable functionality.
+      </p>
+
+      <p>
+        I also explore artificial intelligence, document intelligence,
+        automation, and AI-assisted software development. I am currently
+        pursuing a Doctor in Information Technology, with research interests
+        in AI-powered information systems.
+      </p>
+    </div>
+
+    <div class="about-details">
+
+      <div class="detail-card">
+        <h3>Professional Background</h3>
+        <p>IT Educator and Software Developer</p>
+      </div>
+
+      <div class="detail-card">
+        <h3>Education</h3>
+        <p>Master in Information Technology · Currently pursuing Doctor in Information Technology</p>
+      </div>
+
+      <div class="detail-card">
+        <h3>Development Focus</h3>
+        <p>Web, Android, AI applications, business systems, and IoT</p>
+      </div>
+
+      <div class="detail-card">
+        <h3>Working Approach</h3>
+        <p>Practical solutions, clear communication, maintainable code, and continuous improvement</p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="teaching" style="padding: 88px 24px">
-<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); color: #FFFFFF">What I teach</h2>
-<p style="margin: 0; color: #A9B1C2; max-width: 640px">BSIT subjects, taught hands-on, with projects students can run, show and build on.</p>
-</div>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 18px">
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 18px; color: #FFFFFF">Programming</h3>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px">Logic, problem solving and clean code fundamentals.</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 18px; color: #FFFFFF">Web Development</h3>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px">Building and deploying real websites and web systems.</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 18px; color: #FFFFFF">Mobile Development</h3>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px">Android apps in Java with Android Studio.</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 18px; color: #FFFFFF">IoT</h3>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px">Sensors and devices with Arduino and ESP32.</p>
-</div>
-<div style="border: 1px solid #26304A; border-radius: 14px; padding: 22px; display: flex; flex-direction: column; gap: 6px">
-<h3 style="margin: 0; font-size: 18px; color: #FFFFFF">AI &amp; Emerging Tech</h3>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px">Using AI as a practical tool, not just a buzzword.</p>
-</div>
-</div>
-</div>
+
+<!-- SERVICES -->
+
+<section class="section" id="services">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">How I can help</p>
+      <h2>Services I Offer</h2>
+      <p>
+        From custom websites to intelligent applications,
+        I develop software based on your business requirements.
+      </p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon">🌐</div>
+        <h3>Web Development</h3>
+        <p>
+          Responsive websites and custom web applications
+          designed for business operations and user experience.
+        </p>
+        <ul>
+          <li>Business websites and landing pages</li>
+          <li>PHP and MySQL applications</li>
+          <li>Admin dashboards and management systems</li>
+          <li>REST API development and integration</li>
+          <li>Database design and CRUD systems</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">📱</div>
+        <h3>Android Development</h3>
+        <p>
+          Functional Android applications designed
+          around real-world user and business needs.
+        </p>
+        <ul>
+          <li>Native Android applications using Java</li>
+          <li>SQLite and Firebase integration</li>
+          <li>Offline-first applications</li>
+          <li>Business and productivity applications</li>
+          <li>Application debugging and maintenance</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🤖</div>
+        <h3>AI Application Development</h3>
+        <p>
+          Intelligent applications that integrate AI
+          into practical business and information workflows.
+        </p>
+        <ul>
+          <li>AI chatbot development</li>
+          <li>LLM API integration</li>
+          <li>RAG and document question-answering systems</li>
+          <li>Semantic search and vector databases</li>
+          <li>PDF processing and OCR integration</li>
+        </ul>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">🔌</div>
+        <h3>IoT & Automation</h3>
+        <p>
+          Connected devices and monitoring solutions
+          that collect and process real-world data.
+        </p>
+        <ul>
+          <li>Arduino and ESP32 development</li>
+          <li>Sensor integration</li>
+          <li>Real-time monitoring dashboards</li>
+          <li>IoT data collection and visualization</li>
+          <li>Device-to-server communication</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<section id="projects" style="background: #131C30; padding: 88px 24px">
-<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px">
-<div style="display: flex; flex-direction: column; gap: 8px">
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); color: #FFFFFF">Projects</h2>
-<p style="margin: 0; color: #A9B1C2">Apps I've designed and built for communities, small businesses and learners.</p>
-</div>
-<article style="background: #0E1525; border: 1px solid #26304A; border-radius: 18px; overflow: hidden; display: flex; flex-wrap: wrap">
-<div style="flex: 1 1 320px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Featured · Android app</p>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; color: #FFFFFF">MyTiangge</h3>
-<p style="margin: 0; color: #C9CFDB">A point-of-sale and utang tracker built for sari-sari stores. Owners ring up sales, get the change (sukli) computed instantly, record credit per customer, and see daily, weekly and monthly reports.</p>
-<ul style="margin: 0; padding-left: 20px; color: #C9CFDB; display: flex; flex-direction: column; gap: 4px">
-<li>Quick sale screen with cart, Cash or Utang checkout</li>
-<li>Customer utang ledger with paid and unpaid status</li>
-<li>Low-stock alerts and sales reports</li>
-</ul>
-<p style="margin: auto 0 0; font-size: 14px; color: #A9B1C2">Android · Java · Small business</p>
-</div>
-<div style="flex: 999 1 480px; min-width: 0; background: #1B2540; padding: 24px; display: flex; gap: 16px; overflow-x: auto">
-<img src="assets/mytiangge-home.jpg" alt="MyTiangge home dashboard with sales today and total utang" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/mytiangge-sale.jpg" alt="MyTiangge new sale screen with cart" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/mytiangge-customers.jpg" alt="MyTiangge customers and utang list" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/mytiangge-reports.jpg" alt="MyTiangge reports with sales and utang summaries" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-</div>
-</article>
 
-<article style="background: #0E1525; border: 1px solid #26304A; border-radius: 18px; overflow: hidden; display: flex; flex-direction: column">
-<img src="assets/paddleta-banner.jpg" alt="PaddleTa! — Find courts. Join games. Meet players. Iloilo's pickleball community" style="width: 100%; height: auto; display: block">
-<div style="display: flex; flex-wrap: wrap">
-<div style="flex: 1 1 320px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Featured · Community app</p>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; color: #FFFFFF">PaddleTa!</h3>
-<p style="margin: 0; color: #C9CFDB">Iloilo's pickleball community app. Players find courts on a map, join or host open-play games by skill level, and connect through clubs.</p>
-<ul style="margin: 0; padding-left: 20px; color: #C9CFDB; display: flex; flex-direction: column; gap: 4px">
-<li>Open-play games with slots, skill levels and hosts</li>
-<li>Court map with nearby games</li>
-<li>Public and private clubs, player profiles and chat</li>
-</ul>
-<p style="margin: auto 0 0; font-size: 14px; color: #A9B1C2">Android · Maps · Community</p>
-</div>
-<div style="flex: 999 1 400px; min-width: 0; background: #1B2540; padding: 24px; display: flex; gap: 16px; overflow-x: auto">
-<img src="assets/paddleta-courts.jpg" alt="PaddleTa! courts map showing a nearby game" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/paddleta-community.jpg" alt="PaddleTa! community clubs tab" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-</div>
-</div>
-</article>
+<!-- PROJECTS -->
 
-<article style="background: #0E1525; border: 1px solid #26304A; border-radius: 18px; overflow: hidden; display: flex; flex-wrap: wrap">
-<div style="flex: 1 1 320px; padding: 32px; display: flex; flex-direction: column; gap: 14px">
-<p style="margin: 0; font-size: 13px; letter-spacing: 0.08em; text-transform: uppercase; color: #F5B83D; font-weight: 600">Featured · Trading education app</p>
-<h3 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: 30px; color: #FFFFFF">SuerteFX</h3>
-<p style="margin: 0; color: #C9CFDB">A forex learning and trading companion. SuerteFX Academy takes beginners step by step from their first pip to complete strategies, then lets them practice, analyze real charts and keep a trading journal.</p>
-<ul style="margin: 0; padding-left: 20px; color: #C9CFDB; display: flex; flex-direction: column; gap: 4px">
-<li>20-lesson Academy with unlockable, bite-sized lessons</li>
-<li>Chart analysis: scan a chart photo or live market data to highlight possible trading zones</li>
-<li>Trading journal that turns logged trades into dashboard stats</li>
-</ul>
-<p style="margin: auto 0 0; font-size: 14px; color: #A9B1C2">Android · E-learning · Trading</p>
-</div>
-<div style="flex: 999 1 400px; min-width: 0; background: #1B2540; padding: 24px; display: flex; gap: 16px; overflow-x: auto">
-<img src="assets/suertefx-academy.jpg" alt="SuerteFX Academy start screen with lesson progress" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/suertefx-lessons.jpg" alt="SuerteFX lesson list from Forex Foundations to Reading Charts" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-<img src="assets/suertefx-journal.jpg" alt="SuerteFX trading journal" loading="lazy" style="height: 420px; width: auto; border-radius: 14px; border: 1px solid #26304A; flex: 0 0 auto">
-</div>
-</article>
+<section class="section section-alt" id="projects">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Selected work</p>
+      <h2>Projects I've Built</h2>
+      <p>
+        A selection of software products and development projects
+        focused on solving practical problems.
+      </p>
+    </div>
+
+    <div class="project-list">
 
 
-</div>
+      <!-- MYTIANGGE -->
+
+      <article class="project-card">
+
+        <div class="project-content">
+
+          <div class="project-info">
+
+            <span class="project-label">Featured Project · Android</span>
+
+            <h3>MyTiangge</h3>
+
+            <p>
+              An offline-first Android application designed for sari-sari
+              store owners and small retailers. It helps simplify daily
+              sales, inventory, customer records, and credit transactions
+              without relying on traditional paper-based records.
+            </p>
+
+            <ul>
+              <li>Sales recording and quick checkout</li>
+              <li>Cash and customer credit (utang) transactions</li>
+              <li>Customer ledger and payment tracking</li>
+              <li>Inventory and low-stock monitoring</li>
+              <li>Daily sales and financial summaries</li>
+            </ul>
+
+            <p class="project-tech">
+              Android · Java · SQLite · Offline-first
+            </p>
+
+          </div>
+
+          <div class="project-gallery">
+
+            <img src="assets/mytiangge-home.jpg"
+              alt="MyTiangge dashboard">
+
+            <img src="assets/mytiangge-sale.jpg"
+              alt="MyTiangge sales screen">
+
+            <img src="assets/mytiangge-customers.jpg"
+              alt="MyTiangge customer credit records">
+
+            <img src="assets/mytiangge-reports.jpg"
+              alt="MyTiangge sales reports">
+
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- PADDLETA -->
+
+      <article class="project-card">
+
+        <img
+          src="assets/paddleta-banner.jpg"
+          alt="PaddleTa community application"
+          class="project-banner">
+
+        <div class="project-content">
+
+          <div class="project-info">
+
+            <span class="project-label">Featured Project · Community Platform</span>
+
+            <h3>PaddleTa!</h3>
+
+            <p>
+              A pickleball community application designed to connect
+              players, discover courts, and organize open-play games.
+              The platform aims to make it easier for players to find
+              people to play with and participate in local games.
+            </p>
+
+            <ul>
+              <li>User registration and authentication</li>
+              <li>Community feed with posts and comments</li>
+              <li>Likes, replies, and content moderation</li>
+              <li>Open-play game creation and management</li>
+              <li>Player joining and leaving game slots</li>
+              <li>Court and location information</li>
+            </ul>
+
+            <p class="project-tech">
+              Android · Authentication · Maps · Community Features
+            </p>
+
+          </div>
+
+          <div class="project-gallery">
+
+            <img src="assets/paddleta-courts.jpg"
+              alt="PaddleTa court discovery">
+
+            <img src="assets/paddleta-community.jpg"
+              alt="PaddleTa community interface">
+
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- SUERTEFX -->
+
+      <article class="project-card">
+
+        <div class="project-content">
+
+          <div class="project-info">
+
+            <span class="project-label">Featured Project · Educational Application</span>
+
+            <h3>SuerteFX</h3>
+
+            <p>
+              A forex learning and trading companion designed to help
+              beginners study trading concepts, analyze market information,
+              and organize their trading activities in one application.
+            </p>
+
+            <ul>
+              <li>Structured forex learning modules</li>
+              <li>Progress-based lessons</li>
+              <li>Chart analysis and trading-zone tools</li>
+              <li>Trading journal and trade records</li>
+              <li>Dashboard and performance statistics</li>
+            </ul>
+
+            <p class="project-tech">
+              Android · Financial Education · Data Visualization
+            </p>
+
+          </div>
+
+          <div class="project-gallery">
+
+            <img src="assets/suertefx-academy.jpg"
+              alt="SuerteFX learning dashboard">
+
+            <img src="assets/suertefx-lessons.jpg"
+              alt="SuerteFX learning modules">
+
+            <img src="assets/suertefx-journal.jpg"
+              alt="SuerteFX trading journal">
+
+          </div>
+
+        </div>
+      </article>
+
+
+      <!-- AI PROJECT -->
+
+      <article class="project-card">
+
+        <div class="project-content">
+
+          <div class="project-info">
+
+            <span class="project-label">AI Research & Development · Prototype</span>
+
+            <h3>AI-Powered Legislative Intelligence System</h3>
+
+            <p>
+              An AI-assisted document intelligence project exploring
+              how municipal legislative documents can be processed,
+              searched, and queried using natural language.
+            </p>
+
+            <ul>
+              <li>PDF document extraction and OCR workflow</li>
+              <li>Section-aware document processing</li>
+              <li>Text embeddings and semantic retrieval</li>
+              <li>Vector database integration</li>
+              <li>Retrieval-Augmented Generation (RAG)</li>
+              <li>AI-generated answers with document references</li>
+            </ul>
+
+            <p class="project-tech">
+              Python · FastAPI · ChromaDB · Sentence Transformers · RAG · LLM APIs
+            </p>
+
+          </div>
+
+          <div class="project-placeholder">
+            <div class="symbol">🤖</div>
+            <h3>AI + Document Intelligence</h3>
+            <p>
+              Natural language interaction with structured
+              legislative knowledge and document references.
+            </p>
+          </div>
+
+        </div>
+      </article>
+
+
+    </div>
+  </div>
 </section>
 
-<section id="research" style="padding: 88px 24px">
-<div style="max-width: 1120px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 48px">
-<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 16px">
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); color: #FFFFFF">Research &amp; interests</h2>
-<p style="margin: 0; color: #C9CFDB">As part of my Doctor in Information Technology, I'm exploring how AI, automation and connected devices can make systems smarter, with Digital Twin research as a long-term direction.</p>
-</div>
-<div style="flex: 1 1 360px; display: flex; flex-direction: column; gap: 12px">
-<div style="display: flex; gap: 14px; align-items: baseline"><span style="color: #F5B83D; font-weight: 700">01</span><p style="margin: 0; color: #E6E9F0"><strong>AI-assisted development</strong>: using coding agents to build and improve software</p></div>
-<div style="display: flex; gap: 14px; align-items: baseline"><span style="color: #F5B83D; font-weight: 700">02</span><p style="margin: 0; color: #E6E9F0"><strong>Automation</strong>: cutting repetitive work out of everyday processes</p></div>
-<div style="display: flex; gap: 14px; align-items: baseline"><span style="color: #F5B83D; font-weight: 700">03</span><p style="margin: 0; color: #E6E9F0"><strong>IoT</strong>: Arduino and ESP32 systems that sense and respond</p></div>
-<div style="display: flex; gap: 14px; align-items: baseline"><span style="color: #F5B83D; font-weight: 700">04</span><p style="margin: 0; color: #E6E9F0"><strong>Digital Twins</strong>: live virtual models of real-world systems</p></div>
-</div>
-</div>
+
+<!-- SKILLS -->
+
+<section class="section" id="skills">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Technical expertise</p>
+      <h2>Technologies & Tools</h2>
+      <p>
+        Technologies I use across web, mobile, AI, and connected-device projects.
+      </p>
+    </div>
+
+    <div class="tech-list">
+      <span class="tech-tag">HTML5</span>
+      <span class="tech-tag">CSS3</span>
+      <span class="tech-tag">JavaScript</span>
+      <span class="tech-tag">PHP</span>
+      <span class="tech-tag">MySQL</span>
+      <span class="tech-tag">React</span>
+      <span class="tech-tag">Node.js</span>
+      <span class="tech-tag">Python</span>
+      <span class="tech-tag">FastAPI</span>
+      <span class="tech-tag">Java</span>
+      <span class="tech-tag">Android Studio</span>
+      <span class="tech-tag">SQLite</span>
+      <span class="tech-tag">Firebase</span>
+      <span class="tech-tag">REST APIs</span>
+      <span class="tech-tag">ChromaDB</span>
+      <span class="tech-tag">RAG</span>
+      <span class="tech-tag">LLM Integration</span>
+      <span class="tech-tag">Git & GitHub</span>
+      <span class="tech-tag">Arduino</span>
+      <span class="tech-tag">ESP32</span>
+    </div>
+
+  </div>
 </section>
 
-<section id="contact" style="background: #131C30; padding: 88px 24px">
-<div style="max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 22px; text-align: center; align-items: center">
-<h2 style="margin: 0; font-family: 'Space Grotesk', sans-serif; font-size: clamp(2rem, 4vw, 2.75rem); color: #FFFFFF">Let's build something useful</h2>
-<p style="margin: 0; color: #C9CFDB">Open to app and system projects, research collaboration, and speaking or training on web, mobile, IoT and AI.</p>
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px">
-<a href="mailto:rotsensuerte@gmail.com" style="background: #F5B83D; color: #0E1525; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 600">Email me</a>
-<a href="https://github.com/Quobeih" target="_blank" rel="noopener" style="border: 1px solid #3A4560; color: #FFFFFF; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 600">GitHub</a>
-<a href="https://www.facebook.com/share/14v1XCYP6Wq/" target="_blank" rel="noopener" style="border: 1px solid #3A4560; color: #FFFFFF; text-decoration: none; padding: 14px 24px; border-radius: 10px; font-weight: 600">Facebook</a>
-</div>
-<p style="margin: 0; color: #A9B1C2; font-size: 15px"><a href="mailto:rotsensuerte@gmail.com" style="color: #C9CFDB">rotsensuerte@gmail.com</a></p>
-</div>
+
+<!-- WORK PROCESS -->
+
+<section class="section section-alt">
+  <div class="container">
+
+    <div class="section-heading">
+      <p class="eyebrow">Working together</p>
+      <h2>My Development Process</h2>
+      <p>
+        A straightforward approach to turning your requirements
+        into working software.
+      </p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process-card">
+        <div class="number">01</div>
+        <h3>Understand</h3>
+        <p>
+          Discuss your goals, requirements, and the problem
+          your application needs to solve.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <div class="number">02</div>
+        <h3>Plan & Design</h3>
+        <p>
+          Define the features, database structure,
+          interface, and development approach.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <div class="number">03</div>
+        <h3>Develop & Test</h3>
+        <p>
+          Build the application, test its functionality,
+          and improve the user experience.
+        </p>
+      </div>
+
+      <div class="process-card">
+        <div class="number">04</div>
+        <h3>Deliver</h3>
+        <p>
+          Provide the agreed deliverables and support
+          the deployment or handover process.
+        </p>
+      </div>
+
+    </div>
+  </div>
 </section>
 
-<footer style="border-top: 1px solid #26304A; padding: 24px; text-align: center; color: #A9B1C2; font-size: 14px">© 2026 Prof. Nestor Jr. T. Suerte · IT Educator &amp; Developer</footer>
 
-</div>
+<!-- CONTACT -->
+
+<section class="section" id="contact">
+  <div class="container">
+
+    <div class="contact-box">
+
+      <p class="eyebrow">Have a project in mind?</p>
+
+      <h2>Let's Build Something Together.</h2>
+
+      <p>
+        Looking for a developer to build your website,
+        mobile application, business management system,
+        or AI-powered solution?
+
+        Let's discuss your requirements and find the
+        right technical solution for your project.
+      </p>
+
+      <div class="contact-buttons">
+
+        <a href="mailto:rotsensuerte@gmail.com"
+          class="btn btn-primary">
+          Contact Me
+        </a>
+
+        <a href="https://github.com/Quobeih"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline">
+          GitHub
+        </a>
+
+        <a href="https://www.facebook.com/share/14v1XCYP6Wq/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline">
+          Facebook
+        </a>
+
+      </div>
+
+      <p class="email-text">
+        <a href="mailto:rotsensuerte@gmail.com">
+          rotsensuerte@gmail.com
+        </a>
+      </p>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+  <p>
+    © 2026 Nestor Jr. T. Suerte.
+    Full-Stack Developer · AI & Mobile Application Developer
+  </p>
+</footer>
+
 </body>
 </html>
