@@ -1,332 +1,248 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Nestor Jr. Suerte | Full-Stack Developer & AI Developer</title>
+  <title>Prof. Nestor Jr. T. Suerte | Full-Stack Developer</title>
 
-  <meta name="description" content="Nestor Jr. Suerte is a full-stack software developer specializing in web applications, Android development, AI integration, and business systems.">
+  <meta name="description"
+        content="Prof. Nestor Jr. T. Suerte is a Full-Stack Developer specializing in web applications, Android development, AI integration, IoT systems, and practical business software.">
+
+  <meta name="keywords"
+        content="Full Stack Developer, Web Developer, Android Developer, AI Developer, PHP Developer, Java Developer, IoT Developer, Philippines">
 
   <meta name="author" content="Nestor Jr. T. Suerte">
-  <meta name="theme-color" content="#0E1525">
-
-  <meta property="og:title" content="Nestor Jr. Suerte | Software Developer">
-  <meta property="og:description" content="Building practical web, mobile, and AI-powered software solutions.">
-  <meta property="og:type" content="website">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
   <style>
-    :root {
-      --bg: #0E1525;
-      --surface: #131C30;
-      --card: #18233A;
-      --border: #293650;
-      --gold: #F5B83D;
-      --gold-light: #FFD27A;
-      --white: #FFFFFF;
-      --text: #E6E9F0;
-      --muted: #A9B1C2;
-      --radius: 16px;
-    }
-
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
-    }
-
-    html {
+      box-sizing: border-box;
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
     }
 
     body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: Inter, sans-serif;
-      font-size: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #07111f;
+      color: #e8edf5;
       line-height: 1.7;
     }
 
     a {
-      color: var(--gold);
       text-decoration: none;
-    }
-
-    a:hover {
-      color: var(--gold-light);
+      color: inherit;
     }
 
     img {
       max-width: 100%;
+      display: block;
     }
 
-    h1, h2, h3 {
-      font-family: "Space Grotesk", sans-serif;
-      color: var(--white);
-      line-height: 1.2;
+    :root {
+      --bg: #07111f;
+      --bg2: #0b1728;
+      --card: #101e31;
+      --gold: #d4af37;
+      --gold-light: #f0cf63;
+      --text: #e8edf5;
+      --muted: #9eacbd;
+      --border: rgba(212, 175, 55, 0.2);
     }
 
-    h2 {
-      font-size: clamp(2rem, 4vw, 2.7rem);
-    }
-
-    p {
-      color: var(--muted);
-    }
-
-    .container {
-      width: min(1120px, calc(100% - 48px));
-      margin: auto;
-    }
-
-    .section {
-      padding: 90px 0;
-    }
-
-    .section-alt {
-      background: var(--surface);
-    }
-
-    .section-heading {
-      margin-bottom: 40px;
-    }
-
-    .section-heading p {
-      max-width: 650px;
-      margin-top: 12px;
-    }
-
-    .eyebrow {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 700;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-    }
-
-    .btn {
-      display: inline-flex;
-      justify-content: center;
-      align-items: center;
-      padding: 13px 23px;
-      border-radius: 9px;
-      font-weight: 600;
-      transition: .2s ease;
-    }
-
-    .btn-primary {
-      background: var(--gold);
-      color: var(--bg);
-    }
-
-    .btn-primary:hover {
-      background: var(--gold-light);
-      color: var(--bg);
-      transform: translateY(-2px);
-    }
-
-    .btn-outline {
-      border: 1px solid var(--border);
-      color: var(--white);
-    }
-
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-    }
-
-    /* NAVIGATION */
+    /* NAVBAR */
 
     header {
       position: sticky;
       top: 0;
-      z-index: 100;
-      background: rgba(14, 21, 37, .95);
+      z-index: 1000;
+      background: rgba(7, 17, 31, 0.95);
       backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     .navbar {
-      min-height: 76px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 18px 25px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 20px;
     }
 
     .logo {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: 23px;
-      font-weight: 700;
-      color: var(--white);
+      font-size: 21px;
+      font-weight: bold;
+      color: var(--gold-light);
     }
 
-    .logo span {
-      color: var(--gold);
-    }
-
-    .nav-links {
+    nav {
       display: flex;
-      align-items: center;
       gap: 25px;
     }
 
-    .nav-links a {
-      color: var(--text);
+    nav a {
+      color: var(--muted);
       font-size: 14px;
-      font-weight: 500;
+      transition: 0.3s;
     }
 
-    .nav-links a:hover {
-      color: var(--gold);
-    }
-
-    .nav-links .nav-contact {
-      background: var(--gold);
-      color: var(--bg);
-      padding: 9px 17px;
-      border-radius: 8px;
+    nav a:hover {
+      color: var(--gold-light);
     }
 
     /* HERO */
 
     .hero {
-      min-height: 650px;
+      min-height: 90vh;
       display: flex;
       align-items: center;
-      padding: 75px 0 90px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 25px;
     }
 
-    .hero-grid {
-      display: grid;
-      grid-template-columns: 1.5fr .8fr;
-      gap: 65px;
-      align-items: center;
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero-tag {
+      color: var(--gold-light);
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      font-size: 14px;
+      margin-bottom: 15px;
     }
 
     .hero h1 {
-      font-size: clamp(2.8rem, 6vw, 4.5rem);
-      margin: 17px 0;
-      letter-spacing: -2px;
+      font-size: clamp(42px, 7vw, 76px);
+      line-height: 1.05;
+      margin-bottom: 25px;
     }
 
     .hero h1 span {
-      color: var(--gold);
+      color: var(--gold-light);
     }
 
-    .hero-subtitle {
-      font-family: "Space Grotesk", sans-serif;
-      font-size: clamp(1.2rem, 2.5vw, 1.65rem);
-      color: var(--text);
-      margin-bottom: 20px;
-    }
-
-    .hero-description {
-      max-width: 650px;
-      margin-bottom: 28px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .profile-wrapper {
-      display: flex;
-      justify-content: center;
-    }
-
-    .profile-image {
-      width: 300px;
-      height: 300px;
-      border-radius: 50%;
-      object-fit: cover;
-      object-position: center 20%;
-      border: 5px solid var(--gold);
-      box-shadow: 0 0 50px rgba(245, 184, 61, .12);
-    }
-
-    /* TRUST STRIP */
-
-    .trust-strip {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px 45px;
-      padding: 25px;
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
+    .hero p {
       color: var(--muted);
-      font-size: 14px;
-      font-weight: 600;
-      text-align: center;
+      font-size: 20px;
+      max-width: 750px;
+      margin-bottom: 35px;
     }
 
-    .trust-strip span {
-      color: var(--gold);
+    .buttons {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 13px 24px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: var(--gold);
+      color: #08101c;
+    }
+
+    .btn-primary:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+    }
+
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+    }
+
+    .btn-outline:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* GENERAL */
+
+    section {
+      padding: 90px 25px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-title {
+      margin-bottom: 45px;
+    }
+
+    .section-title span {
+      color: var(--gold-light);
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .section-title h2 {
+      font-size: 38px;
+      margin-top: 8px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 700px;
+      margin-top: 10px;
     }
 
     /* ABOUT */
 
     .about-grid {
       display: grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1fr 1.5fr;
       gap: 50px;
+      align-items: center;
+    }
+
+    .profile-image {
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      background: var(--card);
     }
 
     .about-text p {
-      margin-top: 17px;
+      color: var(--muted);
+      margin-bottom: 18px;
     }
 
-    .about-details {
-      display: grid;
-      gap: 14px;
-    }
-
-    .detail-card {
-      padding: 21px;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-    }
-
-    .detail-card h3 {
-      font-size: 16px;
-      color: var(--gold);
-      margin-bottom: 6px;
-    }
-
-    .detail-card p {
-      font-size: 14px;
+    .highlight {
+      color: var(--gold-light);
+      font-weight: bold;
     }
 
     /* SERVICES */
 
     .services-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
     }
 
     .service-card {
-      padding: 28px;
       background: var(--card);
       border: 1px solid var(--border);
-      border-radius: var(--radius);
-      transition: .2s;
+      border-radius: 14px;
+      padding: 28px;
+      transition: 0.3s;
     }
 
     .service-card:hover {
-      border-color: var(--gold);
-      transform: translateY(-4px);
+      transform: translateY(-5px);
+      border-color: rgba(212, 175, 55, 0.6);
     }
 
     .service-icon {
@@ -335,173 +251,110 @@
     }
 
     .service-card h3 {
-      font-size: 20px;
       margin-bottom: 10px;
+      color: var(--gold-light);
     }
 
     .service-card p {
-      font-size: 14px;
-      margin-bottom: 14px;
-    }
-
-    .service-card ul {
-      padding-left: 18px;
       color: var(--muted);
       font-size: 14px;
-    }
-
-    .service-card li {
-      margin: 5px 0;
-    }
-
-    /* TECHNOLOGIES */
-
-    .tech-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .tech-tag {
-      border: 1px solid var(--border);
-      background: var(--card);
-      padding: 9px 16px;
-      border-radius: 8px;
-      font-size: 14px;
-      color: var(--text);
     }
 
     /* PROJECTS */
 
-    .project-list {
+    #projects {
+      background: var(--bg2);
+    }
+
+    .projects-grid {
       display: grid;
-      gap: 28px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
     }
 
     .project-card {
-      background: var(--bg);
+      background: var(--card);
       border: 1px solid var(--border);
-      border-radius: 18px;
+      border-radius: 15px;
       overflow: hidden;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(212, 175, 55, 0.6);
+    }
+
+    .project-image {
+      height: 220px;
+      overflow: hidden;
+      background: #0a1422;
+    }
+
+    .project-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: 0.4s;
+    }
+
+    .project-card:hover .project-image img {
+      transform: scale(1.05);
     }
 
     .project-content {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      padding: 25px;
     }
 
-    .project-info {
-      padding: 34px;
+    .project-content h3 {
+      color: var(--gold-light);
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .project-content p {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .tech {
       display: flex;
-      flex-direction: column;
-      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 7px;
     }
 
-    .project-label {
-      color: var(--gold);
-      font-size: 12px;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 1px;
+    .tech span {
+      font-size: 11px;
+      padding: 5px 9px;
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      border-radius: 20px;
+      color: var(--gold-light);
+    }
+
+    /* SKILLS */
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .skill-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 25px;
+    }
+
+    .skill-card h3 {
+      color: var(--gold-light);
       margin-bottom: 12px;
     }
 
-    .project-info h3 {
-      font-size: 29px;
-      margin-bottom: 13px;
-    }
-
-    .project-info p {
-      margin-bottom: 15px;
-      font-size: 14px;
-    }
-
-    .project-info ul {
-      padding-left: 19px;
+    .skill-card p {
       color: var(--muted);
       font-size: 14px;
-      margin-bottom: 20px;
-    }
-
-    .project-info li {
-      margin-bottom: 6px;
-    }
-
-    .project-tech {
-      margin-top: auto;
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 600;
-      padding-top: 12px;
-    }
-
-    .project-gallery {
-      background: #1B2540;
-      padding: 22px;
-      display: flex;
-      gap: 14px;
-      overflow-x: auto;
-      align-items: center;
-    }
-
-    .project-gallery img {
-      height: 350px;
-      width: auto;
-      max-width: none;
-      object-fit: contain;
-      border-radius: 10px;
-      border: 1px solid var(--border);
-    }
-
-    .project-banner {
-      width: 100%;
-      display: block;
-    }
-
-    .project-full-info {
-      padding: 30px 34px 35px;
-    }
-
-    .project-full-info h3 {
-      font-size: 27px;
-      margin: 10px 0;
-    }
-
-    .project-full-info p {
-      font-size: 14px;
-      max-width: 850px;
-    }
-
-    .project-full-info ul {
-      padding-left: 20px;
-      color: var(--muted);
-      font-size: 14px;
-      margin: 14px 0;
-    }
-
-    .project-full-info li {
-      margin: 5px 0;
-    }
-
-    .project-placeholder {
-      min-height: 230px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-      padding: 30px;
-      background: linear-gradient(135deg, #1B2540, #10192B);
-    }
-
-    .project-placeholder .symbol {
-      font-size: 55px;
-      margin-bottom: 15px;
-    }
-
-    .project-placeholder p {
-      max-width: 300px;
-      font-size: 13px;
     }
 
     /* PROCESS */
@@ -509,151 +362,195 @@
     .process-grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
+      gap: 20px;
     }
 
     .process-card {
-      padding: 23px;
+      padding: 25px;
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 12px;
     }
 
-    .process-card .number {
+    .process-number {
+      font-size: 30px;
+      font-weight: bold;
       color: var(--gold);
-      font-size: 24px;
-      font-weight: 700;
       margin-bottom: 10px;
     }
 
     .process-card h3 {
-      font-size: 17px;
       margin-bottom: 8px;
     }
 
     .process-card p {
-      font-size: 13px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    /* TEACHING */
+
+    #teaching {
+      background: var(--bg2);
+    }
+
+    .teaching-box {
+      max-width: 850px;
+    }
+
+    .teaching-box p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .teaching-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    .teaching-list div {
+      padding: 15px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--muted);
+    }
+
+    .teaching-list strong {
+      color: var(--gold-light);
+    }
+
+    /* RESEARCH */
+
+    .research-box {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 15px;
+      padding: 35px;
+      max-width: 900px;
+    }
+
+    .research-box h3 {
+      color: var(--gold-light);
+      margin-bottom: 15px;
+    }
+
+    .research-box p {
+      color: var(--muted);
+      margin-bottom: 15px;
     }
 
     /* CONTACT */
 
+    #contact {
+      background: var(--bg2);
+    }
+
     .contact-box {
-      max-width: 760px;
-      margin: auto;
       text-align: center;
+      max-width: 750px;
+      margin: auto;
     }
 
     .contact-box h2 {
-      margin-bottom: 18px;
+      font-size: 42px;
+      margin-bottom: 15px;
     }
 
     .contact-box p {
-      margin-bottom: 25px;
+      color: var(--muted);
+      margin-bottom: 30px;
     }
 
-    .contact-buttons {
+    .contact-links {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 12px;
+      flex-wrap: wrap;
+      gap: 15px;
     }
 
-    .email-text {
-      margin-top: 25px;
-      font-size: 14px;
+    .contact-link {
+      padding: 12px 18px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--gold-light);
+      transition: 0.3s;
     }
+
+    .contact-link:hover {
+      background: rgba(212, 175, 55, 0.1);
+    }
+
+    /* FOOTER */
 
     footer {
-      border-top: 1px solid var(--border);
-      padding: 25px;
       text-align: center;
+      padding: 30px 20px;
       color: var(--muted);
       font-size: 13px;
+      border-top: 1px solid var(--border);
     }
 
-    /* MOBILE */
+    /* RESPONSIVE */
 
-    @media (max-width: 800px) {
-      .hero-grid,
-      .about-grid,
-      .project-content {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 950px) {
 
-      .hero {
-        padding: 55px 0;
-      }
-
-      .profile-wrapper {
-        grid-row: 1;
-      }
-
-      .profile-image {
-        width: 220px;
-        height: 220px;
-      }
-
-      .project-gallery img {
-        height: 290px;
-      }
-
-      .process-grid {
+      .services-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .nav-links {
-        gap: 12px;
+      .projects-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .skills-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .process-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .about-grid {
+        grid-template-columns: 1fr;
       }
     }
 
-    @media (max-width: 600px) {
-      .container {
-        width: calc(100% - 32px);
+    @media (max-width: 700px) {
+
+      nav {
+        display: none;
       }
 
-      .navbar {
-        padding: 14px 0;
-        align-items: flex-start;
-        flex-direction: column;
+      .hero {
+        min-height: 80vh;
+        padding-top: 60px;
       }
 
-      .nav-links {
-        width: 100%;
-        overflow-x: auto;
-        padding-bottom: 5px;
-        gap: 17px;
+      .hero p {
+        font-size: 17px;
       }
 
-      .nav-links a {
-        white-space: nowrap;
-        font-size: 13px;
+      section {
+        padding: 65px 20px;
       }
 
-      .section {
-        padding: 65px 0;
-      }
-
-      .hero h1 {
-        font-size: 2.8rem;
+      .section-title h2 {
+        font-size: 30px;
       }
 
       .services-grid,
-      .process-grid {
+      .projects-grid,
+      .skills-grid,
+      .process-grid,
+      .teaching-list {
         grid-template-columns: 1fr;
       }
 
-      .project-info,
-      .project-full-info {
-        padding: 24px;
-      }
-
-      .project-gallery img {
-        height: 250px;
-      }
-
-      .trust-strip {
-        gap: 12px 22px;
-        font-size: 12px;
+      .contact-box h2 {
+        font-size: 32px;
       }
     }
   </style>
@@ -661,599 +558,710 @@
 
 <body>
 
-<!-- NAVIGATION -->
+  <!-- NAVIGATION -->
 
-<header>
-  <div class="container navbar">
-    <a href="#home" class="logo">N. Suerte<span>.</span></a>
+  <header>
+    <div class="navbar">
 
-    <nav class="nav-links" aria-label="Main navigation">
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#contact" class="nav-contact">Hire Me</a>
-    </nav>
-  </div>
-</header>
+      <a href="#home" class="logo">
+        Nestor Suerte
+      </a>
+
+      <nav>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#research">Research</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+    </div>
+  </header>
 
 
-<!-- HERO -->
+  <!-- HERO -->
 
-<section class="hero" id="home">
-  <div class="container hero-grid">
+  <section class="hero" id="home">
 
-    <div>
-      <p class="eyebrow">Full-Stack Developer · AI & Mobile Developer</p>
+    <div class="hero-content">
+
+      <div class="hero-tag">
+        Full-Stack Developer · AI · Mobile · IoT
+      </div>
 
       <h1>
-        Hi, I'm Nestor Jr. <span>Suerte.</span>
+        I build <span>practical software</span>
+        that solves real-world problems.
       </h1>
 
-      <p class="hero-subtitle">
-        I build practical software solutions that solve real-world problems.
-      </p>
-
-      <p class="hero-description">
-        I'm a software developer and IT educator specializing in web applications,
-        Android development, business management systems, and AI-powered solutions.
-        I help businesses, startups, and organizations turn ideas into functional,
-        user-friendly software.
-      </p>
-
-      <div class="hero-buttons">
-        <a href="#projects" class="btn btn-primary">Explore My Work</a>
-        <a href="#contact" class="btn btn-outline">Let's Work Together</a>
-      </div>
-    </div>
-
-    <div class="profile-wrapper">
-      <img
-        src="assets/profile.jpg"
-        alt="Nestor Jr. Suerte"
-        class="profile-image">
-    </div>
-
-  </div>
-</section>
-
-
-<!-- EXPERTISE STRIP -->
-
-<div class="trust-strip">
-  <div><span>✓</span> Web Development</div>
-  <div><span>✓</span> Android Development</div>
-  <div><span>✓</span> AI Integration</div>
-  <div><span>✓</span> Business Systems</div>
-  <div><span>✓</span> IoT Solutions</div>
-</div>
-
-
-<!-- ABOUT -->
-
-<section class="section section-alt" id="about">
-  <div class="container about-grid">
-
-    <div class="about-text">
-      <p class="eyebrow">Get to know me</p>
-      <h2>About Me</h2>
-
       <p>
-        I am an IT professional who combines academic experience with
-        hands-on software development. As an Assistant Professor in
-        Information Technology, I teach programming, web development,
-        mobile application development, IoT, and emerging technologies.
+        I'm Prof. Nestor Jr. T. Suerte, a Full-Stack Developer and IT educator
+        from the Philippines specializing in web applications, Android apps,
+        AI integration, business systems, and IoT solutions.
       </p>
 
-      <p>
-        Beyond teaching, I design and develop practical software products
-        for small businesses, communities, and organizations. My work
-        focuses on building applications that address actual problems
-        through thoughtful design and reliable functionality.
-      </p>
+      <div class="buttons">
 
-      <p>
-        I also explore artificial intelligence, document intelligence,
-        automation, and AI-assisted software development. I am currently
-        pursuing a Doctor in Information Technology, with research interests
-        in AI-powered information systems.
-      </p>
-    </div>
+        <a href="#projects" class="btn btn-primary">
+          View My Projects
+        </a>
 
-    <div class="about-details">
+        <a href="#contact" class="btn btn-outline">
+          Let's Work Together
+        </a>
 
-      <div class="detail-card">
-        <h3>Professional Background</h3>
-        <p>IT Educator and Software Developer</p>
-      </div>
-
-      <div class="detail-card">
-        <h3>Education</h3>
-        <p>Master in Information Technology · Currently pursuing Doctor in Information Technology</p>
-      </div>
-
-      <div class="detail-card">
-        <h3>Development Focus</h3>
-        <p>Web, Android, AI applications, business systems, and IoT</p>
-      </div>
-
-      <div class="detail-card">
-        <h3>Working Approach</h3>
-        <p>Practical solutions, clear communication, maintainable code, and continuous improvement</p>
       </div>
 
     </div>
-  </div>
-</section>
+
+  </section>
 
 
-<!-- SERVICES -->
+  <!-- ABOUT -->
 
-<section class="section" id="services">
-  <div class="container">
+  <section id="about">
 
-    <div class="section-heading">
-      <p class="eyebrow">How I can help</p>
-      <h2>Services I Offer</h2>
-      <p>
-        From custom websites to intelligent applications,
-        I develop software based on your business requirements.
-      </p>
+    <div class="container">
+
+      <div class="section-title">
+        <span>About Me</span>
+        <h2>Developer who understands technology from both sides.</h2>
+      </div>
+
+      <div class="about-grid">
+
+        <div class="profile-image">
+
+          <img
+            src="assets/profile.jpg"
+            alt="Prof. Nestor Jr. T. Suerte">
+
+        </div>
+
+        <div class="about-text">
+
+          <p>
+            I am an IT educator and software developer with years of experience
+            building and teaching practical technology solutions.
+          </p>
+
+          <p>
+            My development work focuses on applications that people can
+            actually use — from business management apps and community
+            platforms to Android applications, web systems, AI-powered
+            solutions, and IoT projects.
+          </p>
+
+          <p>
+            I combine my background in
+            <span class="highlight">software development, IT education,
+            research, and technology innovation</span>
+            to create solutions that are practical, maintainable, and
+            focused on real user needs.
+          </p>
+
+          <p>
+            I am particularly interested in helping businesses, organizations,
+            researchers, and startups turn ideas into working software.
+          </p>
+
+        </div>
+
+      </div>
+
     </div>
 
-    <div class="services-grid">
+  </section>
 
-      <div class="service-card">
-        <div class="service-icon">🌐</div>
-        <h3>Web Development</h3>
+
+  <!-- SERVICES -->
+
+  <section id="services">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>What I Do</span>
+
+        <h2>Development Services</h2>
+
         <p>
-          Responsive websites and custom web applications
-          designed for business operations and user experience.
+          I can help transform your idea, workflow, or business problem
+          into a functional software solution.
         </p>
-        <ul>
-          <li>Business websites and landing pages</li>
-          <li>PHP and MySQL applications</li>
-          <li>Admin dashboards and management systems</li>
-          <li>REST API development and integration</li>
-          <li>Database design and CRUD systems</li>
-        </ul>
+
       </div>
 
-      <div class="service-card">
-        <div class="service-icon">📱</div>
-        <h3>Android Development</h3>
-        <p>
-          Functional Android applications designed
-          around real-world user and business needs.
-        </p>
-        <ul>
-          <li>Native Android applications using Java</li>
-          <li>SQLite and Firebase integration</li>
-          <li>Offline-first applications</li>
-          <li>Business and productivity applications</li>
-          <li>Application debugging and maintenance</li>
-        </ul>
-      </div>
 
-      <div class="service-card">
-        <div class="service-icon">🤖</div>
-        <h3>AI Application Development</h3>
-        <p>
-          Intelligent applications that integrate AI
-          into practical business and information workflows.
-        </p>
-        <ul>
-          <li>AI chatbot development</li>
-          <li>LLM API integration</li>
-          <li>RAG and document question-answering systems</li>
-          <li>Semantic search and vector databases</li>
-          <li>PDF processing and OCR integration</li>
-        </ul>
-      </div>
+      <div class="services-grid">
 
-      <div class="service-card">
-        <div class="service-icon">🔌</div>
-        <h3>IoT & Automation</h3>
-        <p>
-          Connected devices and monitoring solutions
-          that collect and process real-world data.
-        </p>
-        <ul>
-          <li>Arduino and ESP32 development</li>
-          <li>Sensor integration</li>
-          <li>Real-time monitoring dashboards</li>
-          <li>IoT data collection and visualization</li>
-          <li>Device-to-server communication</li>
-        </ul>
+        <div class="service-card">
+
+          <div class="service-icon">🌐</div>
+
+          <h3>Web Development</h3>
+
+          <p>
+            Responsive websites, business systems, dashboards,
+            CRUD applications, PHP/MySQL systems, APIs, and
+            custom web applications.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">📱</div>
+
+          <h3>Android Development</h3>
+
+          <p>
+            Native Android applications using Java and Android Studio,
+            including business apps, productivity tools, community apps,
+            and offline-first applications.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🤖</div>
+
+          <h3>AI Application Development</h3>
+
+          <p>
+            AI-powered applications, LLM integration, intelligent
+            features, document processing, automation, and
+            AI-assisted workflows.
+          </p>
+
+        </div>
+
+
+        <div class="service-card">
+
+          <div class="service-icon">🔌</div>
+
+          <h3>IoT & Automation</h3>
+
+          <p>
+            Arduino and ESP32 projects, sensor monitoring,
+            real-time data collection, automation, dashboards,
+            and IoT-based prototypes.
+          </p>
+
+        </div>
+
       </div>
 
     </div>
-  </div>
-</section>
+
+  </section>
 
 
-<!-- PROJECTS -->
+  <!-- PROJECTS -->
 
-<section class="section section-alt" id="projects">
-  <div class="container">
+  <section id="projects">
 
-    <div class="section-heading">
-      <p class="eyebrow">Selected work</p>
-      <h2>Projects I've Built</h2>
-      <p>
-        A selection of software products and development projects
-        focused on solving practical problems.
-      </p>
-    </div>
+    <div class="container">
 
-    <div class="project-list">
+      <div class="section-title">
+
+        <span>Selected Work</span>
+
+        <h2>Projects I've Built</h2>
+
+        <p>
+          A selection of practical applications and software projects
+          developed for real-world use cases.
+        </p>
+
+      </div>
 
 
-      <!-- MYTIANGGE -->
+      <div class="projects-grid">
 
-      <article class="project-card">
 
-        <div class="project-content">
+        <!-- MYTIANGGE -->
 
-          <div class="project-info">
+        <article class="project-card">
 
-            <span class="project-label">Featured Project · Android</span>
+          <div class="project-image">
+
+            <img
+              src="assets/mytiangge-home.jpg"
+              alt="MyTiangge Android Application">
+
+          </div>
+
+          <div class="project-content">
 
             <h3>MyTiangge</h3>
 
             <p>
-              An offline-first Android application designed for sari-sari
-              store owners and small retailers. It helps simplify daily
-              sales, inventory, customer records, and credit transactions
-              without relying on traditional paper-based records.
+              An offline-first Android application designed for
+              sari-sari stores and small sellers. It helps store owners
+              manage sales, inventory, customers, and listahan ng utang
+              without relying on an internet connection.
             </p>
 
-            <ul>
-              <li>Sales recording and quick checkout</li>
-              <li>Cash and customer credit (utang) transactions</li>
-              <li>Customer ledger and payment tracking</li>
-              <li>Inventory and low-stock monitoring</li>
-              <li>Daily sales and financial summaries</li>
-            </ul>
+            <div class="tech">
 
-            <p class="project-tech">
-              Android · Java · SQLite · Offline-first
-            </p>
+              <span>Android</span>
+              <span>Java</span>
+              <span>SQLite</span>
+              <span>Offline-first</span>
+              <span>Business App</span>
+
+            </div>
 
           </div>
 
-          <div class="project-gallery">
+        </article>
 
-            <img src="assets/mytiangge-home.jpg"
-              alt="MyTiangge dashboard">
 
-            <img src="assets/mytiangge-sale.jpg"
-              alt="MyTiangge sales screen">
+        <!-- PADDLETA -->
 
-            <img src="assets/mytiangge-customers.jpg"
-              alt="MyTiangge customer credit records">
+        <article class="project-card">
 
-            <img src="assets/mytiangge-reports.jpg"
-              alt="MyTiangge sales reports">
+          <div class="project-image">
+
+            <img
+              src="assets/paddleta-banner.jpg"
+              alt="PaddleTa Pickleball Community App">
 
           </div>
 
-        </div>
-      </article>
-
-
-      <!-- PADDLETA -->
-
-      <article class="project-card">
-
-        <img
-          src="assets/paddleta-banner.jpg"
-          alt="PaddleTa community application"
-          class="project-banner">
-
-        <div class="project-content">
-
-          <div class="project-info">
-
-            <span class="project-label">Featured Project · Community Platform</span>
+          <div class="project-content">
 
             <h3>PaddleTa!</h3>
 
             <p>
-              A pickleball community application designed to connect
-              players, discover courts, and organize open-play games.
-              The platform aims to make it easier for players to find
-              people to play with and participate in local games.
+              A pickleball community application designed to help players
+              discover courts, connect with other players, share posts,
+              and organize open-play games.
             </p>
 
-            <ul>
-              <li>User registration and authentication</li>
-              <li>Community feed with posts and comments</li>
-              <li>Likes, replies, and content moderation</li>
-              <li>Open-play game creation and management</li>
-              <li>Player joining and leaving game slots</li>
-              <li>Court and location information</li>
-            </ul>
+            <div class="tech">
 
-            <p class="project-tech">
-              Android · Authentication · Maps · Community Features
-            </p>
+              <span>Mobile App</span>
+              <span>Authentication</span>
+              <span>Community Feed</span>
+              <span>Open Play</span>
+              <span>Social Features</span>
+
+            </div>
 
           </div>
 
-          <div class="project-gallery">
+        </article>
 
-            <img src="assets/paddleta-courts.jpg"
-              alt="PaddleTa court discovery">
 
-            <img src="assets/paddleta-community.jpg"
-              alt="PaddleTa community interface">
+        <!-- SUERTEFX -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            <img
+              src="assets/suertefx-academy.jpg"
+              alt="SuerteFX Trading Education Platform">
 
           </div>
 
-        </div>
-      </article>
-
-
-      <!-- SUERTEFX -->
-
-      <article class="project-card">
-
-        <div class="project-content">
-
-          <div class="project-info">
-
-            <span class="project-label">Featured Project · Educational Application</span>
+          <div class="project-content">
 
             <h3>SuerteFX</h3>
 
             <p>
-              A forex learning and trading companion designed to help
-              beginners study trading concepts, analyze market information,
-              and organize their trading activities in one application.
+              A trading education and trading companion platform featuring
+              learning resources, chart analysis tools, and a trading
+              journal designed to help traders organize their learning
+              and trading activities.
             </p>
 
-            <ul>
-              <li>Structured forex learning modules</li>
-              <li>Progress-based lessons</li>
-              <li>Chart analysis and trading-zone tools</li>
-              <li>Trading journal and trade records</li>
-              <li>Dashboard and performance statistics</li>
-            </ul>
+            <div class="tech">
 
-            <p class="project-tech">
-              Android · Financial Education · Data Visualization
-            </p>
+              <span>Android</span>
+              <span>Trading Tools</span>
+              <span>Education</span>
+              <span>Charts</span>
+              <span>Journal</span>
+
+            </div>
 
           </div>
 
-          <div class="project-gallery">
+        </article>
 
-            <img src="assets/suertefx-academy.jpg"
-              alt="SuerteFX learning dashboard">
 
-            <img src="assets/suertefx-lessons.jpg"
-              alt="SuerteFX learning modules">
+      </div>
 
-            <img src="assets/suertefx-journal.jpg"
-              alt="SuerteFX trading journal">
+    </div>
 
+  </section>
+
+
+  <!-- SKILLS -->
+
+  <section id="skills">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>Technical Skills</span>
+
+        <h2>Technologies I Work With</h2>
+
+      </div>
+
+
+      <div class="skills-grid">
+
+        <div class="skill-card">
+
+          <h3>Web Development</h3>
+
+          <p>
+            HTML, CSS, JavaScript, PHP, MySQL, REST APIs,
+            responsive interfaces, CRUD systems, dashboards,
+            authentication, and database-driven applications.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>Mobile Development</h3>
+
+          <p>
+            Android Studio, Java, SQLite, local storage,
+            authentication, forms, dashboards, and
+            offline-first application development.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>AI & Automation</h3>
+
+          <p>
+            AI APIs, LLM integration, AI-assisted applications,
+            document processing, automation, intelligent search,
+            and AI-powered workflows.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>IoT Development</h3>
+
+          <p>
+            Arduino, ESP32, sensors, real-time monitoring,
+            data collection, automation, and IoT prototypes.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>Database & Backend</h3>
+
+          <p>
+            MySQL, SQLite, database design, CRUD operations,
+            authentication systems, APIs, and backend logic.
+          </p>
+
+        </div>
+
+
+        <div class="skill-card">
+
+          <h3>Tools & Workflow</h3>
+
+          <p>
+            GitHub, Android Studio, VS Code, XAMPP,
+            API integration, debugging, deployment,
+            testing, and documentation.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- DEVELOPMENT PROCESS -->
+
+  <section>
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>My Process</span>
+
+        <h2>How I Build Software</h2>
+
+      </div>
+
+
+      <div class="process-grid">
+
+        <div class="process-card">
+
+          <div class="process-number">01</div>
+
+          <h3>Understand</h3>
+
+          <p>
+            I first understand the problem, users, workflow,
+            requirements, and desired outcome.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">02</div>
+
+          <h3>Plan</h3>
+
+          <p>
+            I define the application structure, features,
+            database, technology stack, and development approach.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">03</div>
+
+          <h3>Build</h3>
+
+          <p>
+            I develop the system incrementally while keeping
+            the application practical, maintainable, and usable.
+          </p>
+
+        </div>
+
+
+        <div class="process-card">
+
+          <div class="process-number">04</div>
+
+          <h3>Test & Improve</h3>
+
+          <p>
+            I test functionality, fix issues, refine the user
+            experience, and prepare the system for deployment.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- TEACHING -->
+
+  <section id="teaching">
+
+    <div class="container">
+
+      <div class="section-title">
+
+        <span>Professional Background</span>
+
+        <h2>IT Educator & Developer</h2>
+
+      </div>
+
+
+      <div class="teaching-box">
+
+        <p>
+          I am an Assistant Professor in Information Technology,
+          where I teach students how to design, develop, and deploy
+          practical software applications.
+        </p>
+
+        <p>
+          My teaching experience also strengthens my development work
+          because I focus on clear architecture, understandable code,
+          practical implementation, and real-world problem solving.
+        </p>
+
+
+        <div class="teaching-list">
+
+          <div>
+            <strong>Web Development</strong><br>
+            HTML, CSS, PHP, MySQL
+          </div>
+
+          <div>
+            <strong>Mobile Development</strong><br>
+            Android Studio & Java
+          </div>
+
+          <div>
+            <strong>Programming</strong><br>
+            Java & Application Development
+          </div>
+
+          <div>
+            <strong>IoT Development</strong><br>
+            Arduino, ESP32 & Sensors
+          </div>
+
+          <div>
+            <strong>AI & Emerging Technology</strong><br>
+            AI Applications & Innovation
+          </div>
+
+          <div>
+            <strong>Software Projects</strong><br>
+            System Design & Development
           </div>
 
         </div>
-      </article>
+
+      </div>
+
+    </div>
+
+  </section>
 
 
-      <!-- AI PROJECT -->
+  <!-- RESEARCH -->
 
-      <article class="project-card">
+  <section id="research">
 
-        <div class="project-content">
+    <div class="container">
 
-          <div class="project-info">
+      <div class="section-title">
 
-            <span class="project-label">AI Research & Development · Prototype</span>
+        <span>Research & Innovation</span>
 
-            <h3>AI-Powered Legislative Intelligence System</h3>
+        <h2>Technology Beyond Development</h2>
 
-            <p>
-              An AI-assisted document intelligence project exploring
-              how municipal legislative documents can be processed,
-              searched, and queried using natural language.
-            </p>
+      </div>
 
-            <ul>
-              <li>PDF document extraction and OCR workflow</li>
-              <li>Section-aware document processing</li>
-              <li>Text embeddings and semantic retrieval</li>
-              <li>Vector database integration</li>
-              <li>Retrieval-Augmented Generation (RAG)</li>
-              <li>AI-generated answers with document references</li>
-            </ul>
 
-            <p class="project-tech">
-              Python · FastAPI · ChromaDB · Sentence Transformers · RAG · LLM APIs
-            </p>
+      <div class="research-box">
 
-          </div>
+        <h3>Research-driven technology development</h3>
 
-          <div class="project-placeholder">
-            <div class="symbol">🤖</div>
-            <h3>AI + Document Intelligence</h3>
-            <p>
-              Natural language interaction with structured
-              legislative knowledge and document references.
-            </p>
-          </div>
+        <p>
+          My research interests include Artificial Intelligence,
+          Internet of Things, smart systems, software engineering,
+          intelligent applications, and technology solutions for
+          communities and organizations.
+        </p>
+
+        <p>
+          I am particularly interested in transforming research ideas
+          into working prototypes that can eventually become useful
+          software products or real-world systems.
+        </p>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+
+  <section id="contact">
+
+    <div class="container">
+
+      <div class="contact-box">
+
+        <h2>Have a project in mind?</h2>
+
+        <p>
+          Whether you need a web application, Android app,
+          business system, AI integration, or IoT prototype,
+          let's discuss your idea and see how I can help.
+        </p>
+
+
+        <div class="contact-links">
+
+          <a
+            href="mailto:rotsensuerte@gmail.com"
+            class="contact-link">
+
+            Email Me
+
+          </a>
+
+
+          <a
+            href="https://github.com/Quobeih"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link">
+
+            GitHub
+
+          </a>
+
+
+          <a
+            href="https://www.facebook.com/share/14v1XCYP6Wq/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="contact-link">
+
+            Facebook
+
+          </a>
 
         </div>
-      </article>
-
-
-    </div>
-  </div>
-</section>
-
-
-<!-- SKILLS -->
-
-<section class="section" id="skills">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="eyebrow">Technical expertise</p>
-      <h2>Technologies & Tools</h2>
-      <p>
-        Technologies I use across web, mobile, AI, and connected-device projects.
-      </p>
-    </div>
-
-    <div class="tech-list">
-      <span class="tech-tag">HTML5</span>
-      <span class="tech-tag">CSS3</span>
-      <span class="tech-tag">JavaScript</span>
-      <span class="tech-tag">PHP</span>
-      <span class="tech-tag">MySQL</span>
-      <span class="tech-tag">React</span>
-      <span class="tech-tag">Node.js</span>
-      <span class="tech-tag">Python</span>
-      <span class="tech-tag">FastAPI</span>
-      <span class="tech-tag">Java</span>
-      <span class="tech-tag">Android Studio</span>
-      <span class="tech-tag">SQLite</span>
-      <span class="tech-tag">Firebase</span>
-      <span class="tech-tag">REST APIs</span>
-      <span class="tech-tag">ChromaDB</span>
-      <span class="tech-tag">RAG</span>
-      <span class="tech-tag">LLM Integration</span>
-      <span class="tech-tag">Git & GitHub</span>
-      <span class="tech-tag">Arduino</span>
-      <span class="tech-tag">ESP32</span>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- WORK PROCESS -->
-
-<section class="section section-alt">
-  <div class="container">
-
-    <div class="section-heading">
-      <p class="eyebrow">Working together</p>
-      <h2>My Development Process</h2>
-      <p>
-        A straightforward approach to turning your requirements
-        into working software.
-      </p>
-    </div>
-
-    <div class="process-grid">
-
-      <div class="process-card">
-        <div class="number">01</div>
-        <h3>Understand</h3>
-        <p>
-          Discuss your goals, requirements, and the problem
-          your application needs to solve.
-        </p>
-      </div>
-
-      <div class="process-card">
-        <div class="number">02</div>
-        <h3>Plan & Design</h3>
-        <p>
-          Define the features, database structure,
-          interface, and development approach.
-        </p>
-      </div>
-
-      <div class="process-card">
-        <div class="number">03</div>
-        <h3>Develop & Test</h3>
-        <p>
-          Build the application, test its functionality,
-          and improve the user experience.
-        </p>
-      </div>
-
-      <div class="process-card">
-        <div class="number">04</div>
-        <h3>Deliver</h3>
-        <p>
-          Provide the agreed deliverables and support
-          the deployment or handover process.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- CONTACT -->
-
-<section class="section" id="contact">
-  <div class="container">
-
-    <div class="contact-box">
-
-      <p class="eyebrow">Have a project in mind?</p>
-
-      <h2>Let's Build Something Together.</h2>
-
-      <p>
-        Looking for a developer to build your website,
-        mobile application, business management system,
-        or AI-powered solution?
-
-        Let's discuss your requirements and find the
-        right technical solution for your project.
-      </p>
-
-      <div class="contact-buttons">
-
-        <a href="mailto:rotsensuerte@gmail.com"
-          class="btn btn-primary">
-          Contact Me
-        </a>
-
-        <a href="https://github.com/Quobeih"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline">
-          GitHub
-        </a>
-
-        <a href="https://www.facebook.com/share/14v1XCYP6Wq/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="btn btn-outline">
-          Facebook
-        </a>
 
       </div>
 
-      <p class="email-text">
-        <a href="mailto:rotsensuerte@gmail.com">
-          rotsensuerte@gmail.com
-        </a>
-      </p>
-
     </div>
-  </div>
-</section>
+
+  </section>
 
 
-<!-- FOOTER -->
+  <!-- FOOTER -->
 
-<footer>
-  <p>
-    © 2026 Nestor Jr. T. Suerte.
-    Full-Stack Developer · AI & Mobile Application Developer
-  </p>
-</footer>
+  <footer>
+
+    © 2026 Prof. Nestor Jr. T. Suerte.
+    Full-Stack Developer · AI · Mobile · IoT
+
+  </footer>
+
 
 </body>
 </html>
